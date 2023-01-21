@@ -7,14 +7,24 @@ const ingredients = [
   'Condiments',
 ]; 
 
-const listOfIngredients = [];
+const ingredientsList = document.querySelector('#ingredients');
 
-for (const ingredient of ingredients) {
-  const ingredientEl = document.createElement('li')
-  ingredientEl.classList.add('item');
-  ingredientEl.textContent = ingredient;
-  listOfIngredients.push(ingredientEl);
-}
+ingredients.forEach(ingredient => {
+    const itemOfList = document.createElement("li");
+    itemOfList.textContent = ingredient;
+    itemOfList.classList.add("item");
+    ingredientsList.append(itemOfList)
+})
 
-document.querySelector('#ingredients').append(...listOfIngredients)
+
+// const listOfIngredients = [];
+
+// for (const ingredient of ingredients) {
+//   const ingredientEl = document.createElement('li')
+//   ingredientEl.classList.add('item');
+//   ingredientEl.textContent = ingredient;
+//   listOfIngredients.push(ingredientEl);
+// }
+
+// document.querySelector('#ingredients').append(...listOfIngredients)
 

@@ -13,8 +13,32 @@ const images = [
   },
 ];
 
-const listOfImages = images.map(({ url, alt }) => {
-  return `<li><img src = '${url}' alt = '${alt}'/></li>`
-})
+const galleryEl = document.querySelector(".gallery");
 
-document.querySelector('.gallery').insertAdjacentHTML("beforeend", listOfImages)
+const markUp = images.map(img => {
+  return `<li><img src="${img.url}" alt="${img.alt}"/></li>`
+});
+
+galleryEl.insertAdjacentHTML("beforeend", [...markUp]);
+
+// const listOfImages = images.map(({ url, alt }) => {
+//   return `<li><img src = '${url}' alt = '${alt}'/></li>`
+// })
+
+// document.querySelector('.gallery').insertAdjacentHTML("beforeend", listOfImages)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
